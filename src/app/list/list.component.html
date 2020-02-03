@@ -1,0 +1,13 @@
+<h2>{{ title }}</h2>
+<ul>
+
+    <h3>{{ types.length }} types </h3>
+    <li *ngFor="let type of types">
+        {{ type }}
+    </li>
+</ul>
+<div (click)="onDivClick()">
+<button (click)="onPoo($event)">Save</button>
+</div>
+
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()"/>
