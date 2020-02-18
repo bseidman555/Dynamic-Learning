@@ -1,1 +1,19 @@
 <p>posts works!</p>
+
+<input 
+(keyup.enter)="createPosts(title)" #title
+type="text" class="form-control">
+
+<button (click)="getPosts()">Get Posts</button>
+
+<ul class="list-group">
+    <li *ngFor="let post of posts" 
+    class="list-group-item">
+    <button
+    (click)="updatePosts(post)" 
+    class="btn btn-default btn-sm">Update</button>
+    {{ post.title }}
+    </li>
+</ul>
+
+
